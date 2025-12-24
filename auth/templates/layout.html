@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autheticatio Project</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel = 'stylesheet' href = 'styles.css'></link>
+     <style type="text/tailwindcss">
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+    body {
+    /* min-h-screen ensures it takes up at least the full height of the device */
+    /* flex-col stacks the 'img received...' text and the image itself vertically */
+    @apply bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 
+           flex flex-col items-center justify-center min-h-screen p-4 
+           transition-colors duration-300;
+}
+
+/* Updated card for dark mode compatibility */
+form {
+    @apply bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg 
+           w-full max-w-md border border-transparent dark:border-gray-700;
+}
+
+h5 {
+    @apply text-2xl font-bold text-center mb-6 text-gray-800 dark:text-white;
+}
+
+/* Updated input for dark mode compatibility */
+input {
+    @apply w-full bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 
+           rounded px-3 py-2 text-gray-900 dark:text-white focus:outline-none 
+           focus:ring-2 focus:ring-blue-400;
+}
+
+/* Ensure images don't overflow and look clean */
+img {
+    @apply max-w-full h-auto rounded-lg shadow-xl mt-4 border dark:border-gray-700;
+}
+
+button {
+    @apply px-4 py-2 rounded text-white transition;
+}
+
+.button-login {
+    @apply bg-blue-500 hover:bg-blue-600 dark:bg-blue-600 dark:hover:bg-blue-700;
+}
+
+.button-signup {
+    @apply bg-green-500 hover:bg-green-600 dark:bg-green-700 dark:hover:bg-green-800;
+}
+
+h5{
+    @apply bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-300 p-2 rounded mb-2 text-sm;
+}</style>
+
+
+</head>
+<body>
+    {% block content %} {% endblock %}
+</body>
+</html>

@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    Login or Sign up page
+    <form method = 'POST'>
+        <input name= 'email' placeholder = 'Enter email'/>
+        <input name= 'password' placeholder = 'Enter password'/>
+        {% with messages = get_flashed_messages()%}
+
+        {% if messages   %}
+            {% for m in messages   %}
+                <h5> {{m}} </h5>
+            {% endfor%}
+        {% endif%}
+        {% endwith %}
+
+        <button type="submit" name="action" value="login">Login</button>
+        <button type="submit" name="action" value="signup">Sign Up</button>
+
+
+{% endblock %}

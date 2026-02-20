@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    img recived from flask after login
+    <img src = {{img_uri}} />
+
+
+    <form action="{% url 'logout' %}" method="POST">
+        {% csrf_token %}
+        <button type="submit">Log Out</button>
+    </form>
+</div>
+{%endblock%}

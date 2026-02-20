@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    Login or Sign up page
+    <form method = 'POST'>
+        {% csrf_token %}
+        <input name = 'username' placeholder = 'Enter username'/>
+        <input name= 'email' placeholder = 'Enter email'/>
+        <input name= 'password' placeholder = 'Enter password'/>
+        
+       
+        <button type="submit" name="action" value="login">Login</button>
+        <button type="submit" name="action" value="signup">Sign Up</button>
+
+        {% if messages %}
+    {% for message in messages %}
+        <p >{{ message }}</p>
+    {% endfor %}
+{% endif %}
+    </form>
+
+
+{% endblock %}
